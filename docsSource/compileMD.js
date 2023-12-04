@@ -19,7 +19,7 @@ function convertFileNameToId(text) {
  * @param {string} dir - folder containing all the .md files
  */
 
-function compileMD(dir = 'sections') {
+function compileMD(dir = 'sections_zh') {
   const directory = path.join(__dirname, dir);
   const files = fs.readdirSync(directory).sort();
 

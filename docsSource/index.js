@@ -5,7 +5,7 @@ const {version} = JSON.parse(fs.readFileSync('package.json'));
 const compileMD = require('./compileMD');
 const compileAnimationList = require('./compileAnimationList');
 
-const templatePath = path.join(__dirname, 'template.html');
+const templatePath = path.join(__dirname, 'template_zh.html');
 const template = fs.readFileSync(templatePath, 'utf8');
 const outputPath = '../docs';
 const outputFile = 'index.html';
@@ -23,4 +23,3 @@ fs.writeFile(output, withVersion, 'utf8', (err) => {
   if (err) console.error(err);
   console.log('Template compiled succesfully.');
 });
-
