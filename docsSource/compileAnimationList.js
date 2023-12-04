@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const {titleName} = require('./className');
 /**
  * Get and categorize all the animation names and compile
  * to HTML lists
@@ -45,7 +45,7 @@ function compileAnimationlist(dir = '../source', file = 'animate.css') {
 
     return `
       <section class="${parsedTitle}" id="${parsedTitle}">
-        <h3 class="animation-title">${title}</h3>
+        <h3 class="animation-title">${titleName[title]}</h3>
         <ul class="animation-group">${items.join('\n')}</ul>
       </section>
     `;
