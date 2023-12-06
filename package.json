@@ -24,8 +24,7 @@
     "format": "prettier --write \"**/*.{js,json,md,css}\"",
     "docs:library": "npx postcss source/animate.css -o ./docs/animate.min.css --no-map --env production",
     "docs:pages": "node ./docsSource/index.js",
-    "docs:sw": "workbox generateSW docsSource/sw_config.js --no-map",
-    "docs": "npm-run-all docs:library docs:pages docs:sw",
+    "docs": "npm-run-all docs:library docs:pages",
     "version": "npm-run-all start docs && git add -A docs animate.css animate.min.css animate.compat.css",
     "postversion": "git push && git push --tags",
     "prepare": "husky install"
@@ -56,8 +55,7 @@
     "postcss-import": "^14.0.2",
     "postcss-prefixer": "^2.1.3",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^2.7.1",
-    "workbox-cli": "^7.0.0"
+    "prettier": "^2.7.1"
   },
   "lint-staged": {
     "*.{mjs,js,json,md,css}": "prettier --write"
